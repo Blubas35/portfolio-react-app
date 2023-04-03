@@ -11,11 +11,11 @@ const About = () => {
                     <div></div>
                 </div>
                 <div className='max-w-[1000px] w-full sm:grid grid-cols-2 gap-8 px-4'>
-                    <div className='sm:text-right text-4-xl font-bold'>
-                        <p>Hi. I am Dom, nice to meet you. I am a front-end developer based in Klaipeda, Lithuania. Please take a look around and don't hesitate to contact me!</p>
+                    <div className='sm:text-right text-4xl font-bold'>
+                        <p>Hi. I am Dom. I am a front-end developer based in Klaipeda, Lithuania. Please take a look around!</p>
                     </div>
                     <div>
-                        <p>I am passionate about building beautiful and functional websites to elevate online presence</p>
+                        <p>I am passionate about building beautiful and functional websites to elevate online presence. I specialized in creating perfect user experience</p>
                     </div>
                 </div>
             </div>
