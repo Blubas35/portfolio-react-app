@@ -1,5 +1,5 @@
 import React from 'react'
-import WorkImg from '../assets/logo.png'
+import JSONApi from '../assets/JSONApiWebsite.PNG'
 import BookReview from '../assets/BookReview.PNG'
 import GridItem from '../Components/WorkItem/GridItem'
 
@@ -18,21 +18,29 @@ const Work = () => {
                     <GridItem 
                     bgImage={BookReview}
                     spanText='React JS + Scss'
+                    demoLink='https://finals-api-1.vercel.app/'
+                    codeLink='https://github.com/Blubas35/finals-api-1-react-scss'
                     />
                     {/*Grid item */}
                     <GridItem 
-                    bgImage={WorkImg}
-                    spanText='Vieta jusu projektui'
+                    bgImage={JSONApi}
+                    spanText='JS + BootsTrap'
+                    demoLink='https://blubas35.github.io/Api-Project-JS-BootsTrap/'
+                    codeLink='https://github.com/Blubas35/Api-Project-JS-BootsTrap'
                     />
                     {/*Grid item */}
                     <GridItem 
-                    bgImage={WorkImg}
+                    bgImage={JSONApi}
                     spanText='Vieta jusu projektui'
+                    demoLink=''
+                    codeLink=''
                     />
                     {/*Grid item */}
                     <GridItem 
                     bgImage={BookReview}
                     spanText='Vieta jusu projektui'
+                    demoLink=''
+                    codeLink=''
                     />
                 </div>
             </div>
