@@ -29,19 +29,19 @@ const Work = () => {
                     codeLink='https://github.com/Blubas35/Api-Project-JS-BootsTrap'
                     />
                     {/*Grid item */}
-                    <GridItem 
+                    {/* <GridItem 
                     bgImage={JSONApi}
                     spanText='Vieta jusu projektui'
                     demoLink=''
                     codeLink=''
-                    />
+                    /> */}
                     {/*Grid item */}
-                    <GridItem 
+                    {/* <GridItem 
                     bgImage={BookReview}
                     spanText='Vieta jusu projektui'
                     demoLink=''
                     codeLink=''
-                    />
+                    /> */}
                 </div>
             </div>
         </div>
