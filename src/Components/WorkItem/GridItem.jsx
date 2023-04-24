@@ -1,5 +1,4 @@
 import React from 'react'
-// import BookReview from '../../assets/BookReview.PNG'
 
 const GridItem = ({ bgImage, spanText, demoLink, codeLink }) => {
   return (
