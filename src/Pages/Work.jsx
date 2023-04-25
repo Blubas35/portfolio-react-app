@@ -1,6 +1,7 @@
 import React from 'react'
 import JSONApi from '../assets/JSONApiWebsite.PNG'
 import BookReview from '../assets/BookReview.PNG'
+import ReactBasics from '../assets/ReactBasics.PNG'
 import GridItem from '../Components/WorkItem/GridItem'
 
 const Work = () => {
@@ -29,12 +30,12 @@ const Work = () => {
                     codeLink='https://github.com/Blubas35/Api-Project-JS-BootsTrap'
                     />
                     {/*Grid item */}
-                    {/* <GridItem 
-                    bgImage={JSONApi}
-                    spanText='Vieta jusu projektui'
+                    <GridItem 
+                    bgImage={ReactBasics}
+                    spanText='React basics'
                     demoLink=''
                     codeLink=''
-                    /> */}
+                    />
                     {/*Grid item */}
                     {/* <GridItem 
                     bgImage={BookReview}

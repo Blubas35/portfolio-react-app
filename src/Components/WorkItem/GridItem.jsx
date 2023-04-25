@@ -1,6 +1,20 @@
-import React from 'react'
+
+import React, { useState } from 'react'
+import Modal from './Modals';
 
 const GridItem = ({ bgImage, spanText, demoLink, codeLink }) => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function openModal() {
+    setIsModalOpen(true);
+  }
+
+  function closeModal() {
+    setIsModalOpen(false);
+  }
+
+
   return (
     <div className='relative group'>
       <div className='inset-0 bg-gradient-to-t from-gray-500 opacity-50 group-hover:opacity-100'>
@@ -10,11 +24,21 @@ const GridItem = ({ bgImage, spanText, demoLink, codeLink }) => {
 
           {/* Hover Effects */}
           <div className='opacity-0 group-hover:opacity-100'>
-            <span className='text-2xl font-bold text-white tracking-wider'>
-            {spanText}
+            <div className='absolute top-0 right-0'>
+            </div>
+
+            <div>
+              <button className="bg-blue-500 text-white py-2 px-4 rounded" onClick={openModal}>
+                Open Modal
+              </button>
+              <Modal isOpen={isModalOpen} closeModal={closeModal} />
+            </div>
+
+            <span className='text-2xl font-bold text-white px-4 tracking-wider'>
+              {spanText}
             </span>
             <div className='pt-8 text-center'>
-              <a href={demoLink}target='_blank'>
+              <a href={demoLink} target='_blank'>
                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
               </a>
               <a href={codeLink} target='_blank'>
