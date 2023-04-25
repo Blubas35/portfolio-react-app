@@ -3,7 +3,7 @@ import MePhoto from '../assets/Profiline foto.png'
 
 const About = () => {
     return (
-        <div name='about' className='w-full h-screen bg-black text-light-gray'>
+        <div name='about' className='w-full h-full md:h-screen bg-black text-light-gray'>
             <div className='flex flex-col justify-center items-center w-full h-full'>
                 <div className='max-w-[1000px] w-full'>
                     <div className='pl-4'>
