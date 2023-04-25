@@ -9,7 +9,7 @@ import Bootstrap from '../assets/Bootstrap.png'
 
 const Skills = () => {
     return (
-        <div name='skills' className='w-full h-screen pt-40 bg-black text-light-gray'>
+        <div name='skills' className='w-full h-full pt-32 md:pt-40 bg-black text-light-gray'>
             {/* container */}
             <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
                 <div>
