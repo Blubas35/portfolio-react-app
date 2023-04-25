@@ -3,7 +3,7 @@ import LinkItem from './MenuItem/LinkItem'
 
 const Menu = () => {
     return (
-        <ul className='hidden md:flex'>
+        <ul className='hidden gap-x-8 pr-3 md:flex'>
 
             <LinkItem
                 linkTo='home'
