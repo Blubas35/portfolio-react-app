@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import LinkItem from './MenuItem/LinkItem'
+import { motion } from "framer-motion"
 
 const Menu = () => {
+
+    const navVariants = {
+        hidden: {
+            opacity: 0,
+            y: -50,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.7,
+                staggerChildren: 0.1,
+            },
+        },
+    };
+
     return (
-        <ul className='hidden gap-x-8 pr-3 md:flex'>
+        <motion.ul 
+        className='hidden gap-x-8 pr-3 md:flex'
+        variants={navVariants}
+        initial='hidden'
+        animate='visible'
+        >
 
             <LinkItem
                 linkTo='home'
@@ -30,7 +52,7 @@ const Menu = () => {
                 text='Contact'
             />
 
-        </ul>
+        </motion.ul>
     )
 }
 

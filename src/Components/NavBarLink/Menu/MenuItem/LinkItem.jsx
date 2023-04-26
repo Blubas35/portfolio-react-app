@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-scroll'
+import { motion } from "framer-motion"
 
 const LinkItem = ({ linkTo, text }) => {
     return (
-        <li className='px-0 border-b-2 border-black hover:border-orange'>
+        <motion.li className='nav-link px-0 border-b-2 border-black hover:border-orange'>
             <Link to={linkTo} smooth={true} duration={500} >
                 {text}
             </Link>
-        </li>
+        </motion.li>
     )
 }
 
