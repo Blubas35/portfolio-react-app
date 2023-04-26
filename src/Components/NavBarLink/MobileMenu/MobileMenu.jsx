@@ -3,7 +3,7 @@ import MobileLinkItem from './MobileMenuItem/MobileLinkItem'
 
 const MobileMenu = ({ nav, onClick }) => {
     return (
-        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
+        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center text-light-gray'}>
 
             <MobileLinkItem 
             onClick={onClick}

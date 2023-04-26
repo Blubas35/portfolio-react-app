@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react'
 import Modal from './Modals';
+import { ReactComponent as ExpandIcon } from '../../assets/Expand.svg'
+
 
 const GridItem = ({ bgImage, spanText, demoLink, codeLink }) => {
 
@@ -27,9 +29,9 @@ const GridItem = ({ bgImage, spanText, demoLink, codeLink }) => {
             <div className='absolute top-0 right-0'>
             </div>
 
-            <div>
-              <button className="bg-blue-500 text-white py-2 px-4 rounded" onClick={openModal}>
-                Open Modal
+            <div className='flex justify-end relative'>
+              <button className="modal-button absolute text-center rounded-lg px-2 py-1 bg-white text-gray-700 font-bold text-lg" onClick={openModal}>
+                <ExpandIcon className="w-5 h-5 inline-block" />
               </button>
               <Modal isOpen={isModalOpen} closeModal={closeModal} />
             </div>

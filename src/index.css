@@ -45,7 +45,6 @@
     display: block;
     position: absolute;
     width: 100%;
-    height: 100%;
     border-radius: 4px;
     transition: var(--transition);
     top: 0px;
@@ -88,4 +87,9 @@
 
 .profile-pic {
     transform: translateZ(0);
+}
+
+.modal-button {
+    top: -48px;
+    right: -38px;
 }
