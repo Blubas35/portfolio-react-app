@@ -1,10 +1,38 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MePhoto from '../assets/Profiline foto.png'
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from 'react-intersection-observer';
 
 const About = () => {
+
+    const { ref, inView, entry } = useInView({ threshold: 0.2, triggerOnce: true });
+    const controls = useAnimation();
+
+    const variant = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 2 } },
+    };
+
+    useEffect(() => {
+        if (inView && entry.isIntersecting) {
+            controls.start('visible');
+        } else {
+            controls.start('hidden');
+        }
+    }, [controls, inView, entry]);
+
     return (
-        <div name='about' className='w-full h-full md:h-screen bg-black text-light-gray'>
-            <div className='flex flex-col justify-center items-center w-full h-full'>
+        <div
+            name='about'
+            className='w-full h-full md:h-screen bg-black text-light-gray'
+        >
+            <motion.div
+                className='flex flex-col justify-center items-center w-full h-full'
+                ref={ref}
+                variants={variant}
+                initial='hidden'
+                animate={controls}
+            >
                 <div className='max-w-[1000px] w-full'>
                     <div className='pl-4'>
                         <p className='text-4xl font-bold inline border-b-4 border-orange'>About</p>
@@ -31,7 +59,7 @@ const About = () => {
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

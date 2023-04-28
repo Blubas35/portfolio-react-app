@@ -3,10 +3,32 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
+import { motion } from "framer-motion"
 
 const SocialIcons = () => {
+
+    const navVariants = {
+        hidden: {
+            opacity: 0,
+            x: -50,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.7,
+                staggerChildren: 0.1,
+            },
+        },
+    };
+
     return (
-        <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+        <motion.div
+            className='hidden lg:flex fixed flex-col top-[35%] left-0'
+            variants={navVariants}
+            initial='hidden'
+            animate='visible'
+        >
             <ul>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
                     <a className='flex justify-between items-center w-full text-gray-300'
@@ -32,7 +54,7 @@ const SocialIcons = () => {
                     </a>
                 </li>
             </ul>
-        </div>
+        </motion.div>
     )
 }
 

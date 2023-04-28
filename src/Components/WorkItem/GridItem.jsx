@@ -4,7 +4,7 @@ import Modal from './Modals';
 import { ReactComponent as ExpandIcon } from '../../assets/Expand.svg'
 
 
-const GridItem = ({ bgImage, spanText, demoLink, codeLink }) => {
+const GridItem = ({ bgImage, spanText, demoLink, codeLink, titleText, bodyText }) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -33,7 +33,12 @@ const GridItem = ({ bgImage, spanText, demoLink, codeLink }) => {
               <button className="modal-button absolute text-center rounded-lg px-2 py-1 bg-white text-gray-700 font-bold text-lg" onClick={openModal}>
                 <ExpandIcon className="w-5 h-5 inline-block" />
               </button>
-              <Modal isOpen={isModalOpen} closeModal={closeModal} />
+              <Modal
+                isOpen={isModalOpen}
+                closeModal={closeModal}
+                titleText={titleText}
+                bodyText={bodyText}
+              />
             </div>
 
             <span className='text-2xl font-bold text-white px-4 tracking-wider'>

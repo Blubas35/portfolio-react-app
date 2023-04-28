@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HTML from '../assets/html.png'
 import CSS from '../assets/css.png'
 import JavaScript from '../assets/javascript.png'
@@ -6,12 +6,39 @@ import GitHub from '../assets/github.png'
 import ReactImg from '../assets/react.png'
 import Tailwind from '../assets/tailwind.png'
 import Bootstrap from '../assets/Bootstrap.png'
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from 'react-intersection-observer';
+
 
 const Skills = () => {
+
+    const { ref, inView, entry } = useInView({ threshold: 0.2, triggerOnce: true });
+    const controls = useAnimation();
+
+    const variant = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 2 } },
+    };
+
+    useEffect(() => {
+        if (inView && entry.isIntersecting) {
+            controls.start('visible');
+        } else {
+            controls.start('hidden');
+        }
+    }, [controls, inView, entry]);
+
+
     return (
         <div name='skills' className='w-full h-full pt-32 md:pt-40 bg-black text-light-gray'>
             {/* container */}
-            <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+            <motion.div
+                className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'
+                ref={ref}
+                variants={variant}
+                initial='hidden'
+                animate={controls}
+            >
                 <div>
                     <p className='text-4xl font-bold inline border-b-4 border-orange'>Skills</p>
                     <p className='py-4'>// These are the technologies I've worked with</p>
@@ -46,7 +73,7 @@ const Skills = () => {
                         <p className='my-4'>GitHub</p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

@@ -1,13 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from 'react-intersection-observer';
+
 
 const Home = () => {
+
+    const { ref, inView, entry } = useInView({ threshold: 0.2, triggerOnce: true });
+    const controls = useAnimation();
+
+    const variant = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 2 } },
+    };
+
+    useEffect(() => {
+        if (inView && entry.isIntersecting) {
+            controls.start('visible');
+        } else {
+            controls.start('hidden');
+        }
+    }, [controls, inView, entry]);
+
     return (
         <div name='home' className='w-full h-screen bg-black'>
 
             {/* CONTAINER */}
-            <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+            <motion.div
+                className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'
+                ref={ref}
+                variants={variant}
+                initial='hidden'
+                animate={controls}
+            >
                 <p className='text-light-gray'>Hi, my name is </p>
                 <h1 className='text-4xl sm:text-7xl font-bold text-orange'>Domantas Tevelis</h1>
                 <h2 className='text-4xl sm:text-7xl font-bold text-light-gray'>I am a Front-End Developer</h2>
@@ -19,9 +45,9 @@ const Home = () => {
                                 <HiArrowNarrowRight className='ml-3' />
                             </span>
                         </button>
-                    </Link> 
+                    </Link>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }
