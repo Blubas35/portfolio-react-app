@@ -25,14 +25,14 @@ const Footer = () => {
             className='h-[150px] bg-black'
         >
             <motion.div 
-            class="container max-w-[1000px] mx-auto px-8 flex flex-col justify-end items-center h-full text-light-gray pb-10"
+            className="container max-w-[1000px] mx-auto px-8 flex flex-col justify-end items-center h-full text-light-gray pb-10"
             ref={ref}
             variants={variant}
             initial='hidden'
             animate={controls}
             >
-                <div class="row">
-                    <div class="col-md-12">
+                <div className="row">
+                    <div className="col-md-12">
                         <p>&copy; 2023 Domantas Portfolio. All Rights Reserved.</p>
                     </div>
                 </div>
