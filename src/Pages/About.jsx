@@ -42,7 +42,7 @@ const About = () => {
                 <div className='grid md:grid-cols-about max-w-[1000px] gap-6'>
                     <div className='max-w-[1000px] w-full px-4 flex flex-col justify-center'>
                         <div className='text-4xl font-bold mb-4'>
-                            <p>Hi. I am Dom. I am a front-end developer based in Klaipeda, Lithuania. Please take a look around!</p>
+                            <p>Hi. I am Domantas. I am an entry level front-end developer based in Klaipeda, Lithuania. Please take a look around!</p>
                         </div>
                         <div>
                             <p>I am passionate about building beautiful and functional websites to elevate online presence. I mainly use React to build high-quality and efficient websites. I take pride in my ability to write clear, efficient code that delivers a seamless user experience.</p>

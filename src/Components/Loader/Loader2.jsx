@@ -4,7 +4,7 @@ import { ReactComponent as Logo } from '../../assets/loading.svg';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Lottie from "lottie-react";
-import loadingAnimation from "../../assets/loading.json"
+import loadingAnimation from "../../assets/LoadingOrange.json"
 
 const Loader = ({ finishLoading }) => {
     const isMountedRef = useRef(false)

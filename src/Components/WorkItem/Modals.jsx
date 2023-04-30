@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 
-function Modal({ isOpen, closeModal, titleText, bodyText }) {
+function Modal({ isOpen, closeModal, titleText, bodyText, bodyText2 }) {
     const modalClasses = isOpen
         ? "fixed inset-0 z-50 overflow-auto bg-opacity-50 bg-black transition-opacity duration-500"
         : "fixed inset-0 z-50 overflow-auto bg-opacity-0 pointer-events-none transition-opacity duration-500";
-  
+
 
     const modalContentClasses = isOpen
         ? "relative w-auto max-w-3xl mx-auto my-24 opacity-100 transition-opacity duration-500"
@@ -28,10 +28,14 @@ function Modal({ isOpen, closeModal, titleText, bodyText }) {
             <div className={modalContentClasses} onClick={(e) => e.stopPropagation()}>
                 <div className="bg-white rounded shadow-lg">
                     <div className="px-4 py-2 text-lg text-black font-bold border-b-4 border-orange">
-                    {titleText}
+                        {titleText}
                     </div>
                     <div className="p-4 text-black">
                         <p>{bodyText}</p>
+                        {bodyText2 &&
+                            <p className="pt-4">{bodyText2}</p>
+                        }
+
                     </div>
                     <div className="px-4 py-2 text-right">
                         <button

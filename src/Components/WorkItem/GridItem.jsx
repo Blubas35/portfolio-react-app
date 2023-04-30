@@ -4,7 +4,7 @@ import Modal from './Modals';
 import { ReactComponent as ExpandIcon } from '../../assets/Expand.svg'
 
 
-const GridItem = ({ bgImage, spanText, demoLink, codeLink, titleText, bodyText }) => {
+const GridItem = ({ bgImage, spanText, demoLink, codeLink, titleText, bodyText, bodyText2 }) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -38,6 +38,7 @@ const GridItem = ({ bgImage, spanText, demoLink, codeLink, titleText, bodyText }
                 closeModal={closeModal}
                 titleText={titleText}
                 bodyText={bodyText}
+                bodyText2={bodyText2}
               />
             </div>
 
