@@ -36,7 +36,7 @@ const Home = () => {
             >
                 <p className='text-light-gray'>Hi, my name is </p>
                 <h1 className='text-4xl sm:text-7xl font-bold text-orange'>Domantas Tevelis</h1>
-                <h2 className='text-4xl sm:text-7xl font-bold text-light-gray'>I am a Front-End Developer</h2>
+                <h2 className='text-4xl sm:text-7xl font-bold text-light-gray'>I am a Junior Front-End Developer</h2>
                 <p className='text-light-gray py-4 max-w-[700px]'>I specialized in building and designing websites. Currently, I am focused on React responsive websites that deliver exceptional user experiences.</p>
                 <div>
                     <Link to="work" smooth={true} duration={500}>
