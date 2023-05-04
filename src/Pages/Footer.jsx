@@ -24,19 +24,21 @@ const Footer = () => {
         <footer
             className='h-[150px] bg-black'
         >
-            <motion.div 
-            className="container max-w-[1000px] mx-auto px-8 flex flex-col justify-end items-center h-full text-light-gray pb-10"
-            ref={ref}
-            variants={variant}
-            initial='hidden'
-            animate={controls}
+            <div
+                className="container max-w-[1000px] mx-auto px-8 flex flex-col justify-end items-center h-full text-light-gray pb-10"
             >
                 <div className="row">
-                    <div className="col-md-12">
+                    <motion.div
+                        className="col-md-12"
+                        ref={ref}
+                        variants={variant}
+                        initial='hidden'
+                        animate={controls}
+                    >
                         <p>&copy; 2023 Domantas Portfolio. All Rights Reserved.</p>
-                    </div>
+                    </motion.div>
                 </div>
-            </motion.div>
+            </div>
         </footer>
     )
 }
