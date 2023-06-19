@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import LinkItem from './MenuItem/LinkItem'
 import { motion } from "framer-motion"
 

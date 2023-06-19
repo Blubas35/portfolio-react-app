@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
+import { FaBars, FaTimes} from 'react-icons/fa'
 import Logo from '../assets/DTLogo.png'
 import { Link } from 'react-scroll'
 import Menu from '../Components/NavBarLink/Menu/Menu'

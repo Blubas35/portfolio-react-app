@@ -1,7 +1,5 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as Logo } from '../../assets/loading.svg';
-import { useState } from 'react';
 import { useEffect } from 'react';
 import Lottie from "lottie-react";
 import loadingAnimation from "../../assets/LoadingOrange.json"

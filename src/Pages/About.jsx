@@ -10,7 +10,7 @@ const About = () => {
 
     const variant = {
         hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 2 } },
+        visible: { opacity: 1, y: 0, transition: { duration: 1 } },
     };
 
     useEffect(() => {
@@ -53,7 +53,7 @@ const About = () => {
                             <div className='image-wrapper w-full max-w-[250px] align-middle overflow-hidden'>
                                 <div className='overlay max-w-[500px] block'></div>
                                 <div className='overlay-2 max-w-[250px] opacity-0 transition-opacity duration-500 ease-linear delay-[0s] bg-[rgb(232,232,232)] absolute object-cover inset-0'></div>
-                                <img src={MePhoto} alt='my profile picture' className='profile-pic object-cover opacity-100 transition-opacity duration-[0.25s] ease-linear will-change-[opacity] absolute m-0 p-0 inset-0 rounded max-w-[250px] z-10 w-full h-full'></img>
+                                <img src={MePhoto} alt='my profile' className='profile-pic object-cover opacity-100 transition-opacity duration-[0.25s] ease-linear will-change-[opacity] absolute m-0 p-0 inset-0 rounded max-w-[250px] z-10 w-full h-full'></img>
                             </div>
                         </div>
                     </div>

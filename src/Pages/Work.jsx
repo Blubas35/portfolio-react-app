@@ -13,7 +13,7 @@ const Work = () => {
 
     const variant = {
         hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 2 } },
+        visible: { opacity: 1, y: 0, transition: { duration: 1 } },
     };
 
     useEffect(() => {

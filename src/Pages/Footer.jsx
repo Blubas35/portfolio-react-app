@@ -1,46 +1,18 @@
-import React, { useEffect } from 'react'
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from 'react-intersection-observer';
+import React from "react";
 
 const Footer = () => {
 
-    const { ref, inView, entry } = useInView({ threshold: 0.2, triggerOnce: true });
-    const controls = useAnimation();
+  return (
+    <footer className="h-[150px] bg-black">
+      <div className="container max-w-[1000px] mx-auto px-8 flex flex-col justify-end items-center h-full text-light-gray pb-10">
+        <div className="row">
+          <div className="col-md-12">
+            <p>&copy; 2023 Domantas Portfolio. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-    const variant = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 2 } },
-    };
-
-    useEffect(() => {
-        if (inView && entry.isIntersecting) {
-            controls.start('visible');
-        } else {
-            controls.start('hidden');
-        }
-    }, [controls, inView, entry]);
-
-    return (
-        <footer
-            className='h-[150px] bg-black'
-        >
-            <div
-                className="container max-w-[1000px] mx-auto px-8 flex flex-col justify-end items-center h-full text-light-gray pb-10"
-            >
-                <div className="row">
-                    <motion.div
-                        className="col-md-12"
-                        ref={ref}
-                        variants={variant}
-                        initial='hidden'
-                        animate={controls}
-                    >
-                        <p>&copy; 2023 Domantas Portfolio. All Rights Reserved.</p>
-                    </motion.div>
-                </div>
-            </div>
-        </footer>
-    )
-}
-
-export default Footer
+export default Footer;

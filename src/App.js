@@ -5,7 +5,6 @@ import Home from "./Pages/Home";
 import NavBar from "./Pages/NavBar";
 import Skills from "./Pages/Skills";
 import Work from "./Pages/Work";
-import Loader from "./Components/Loader/Loader";
 import Loader2 from "./Components/Loader/Loader2";
 import Footer from "./Pages/Footer";
 
@@ -16,7 +15,7 @@ function App() {
   const finishLoading = () => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
   };
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
@@ -32,13 +32,13 @@ const SocialIcons = () => {
             <ul>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
                     <a className='flex justify-between items-center w-full text-gray-300'
-                        href='https://www.linkedin.com/in/domantas-tevelis-697343169/' target='_blank'>
+                        href='https://www.linkedin.com/in/domantas-tevelis-697343169/' target='_blank' rel='noreferrer'>
                         Linkedin <FaLinkedin size={30} />
                     </a>
                 </li>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
                     <a className='flex justify-between items-center w-full text-gray-300'
-                        href='https://github.com/Blubas35?tab=repositories' target='_blank'>
+                        href='https://github.com/Blubas35?tab=repositories' target='_blank' rel='noreferrer'>
                         GitHub <FaGithub size={30} />
                     </a>
                 </li>
@@ -49,7 +49,7 @@ const SocialIcons = () => {
                 </li>
                 <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
                     <a className='flex justify-between items-center w-full text-gray-300'
-                        href='https://www.dropbox.com/s/8d9x9jx11i3tbo0/CV%20EN%20Front-end.pdf?dl=0' target='_blank'>
+                        href='https://www.dropbox.com/s/8d9x9jx11i3tbo0/CV%20EN%20Front-end.pdf?dl=0' target='_blank' rel='noreferrer'>
                         Resume <BsFillPersonLinesFill size={30} />
                     </a>
                 </li>
