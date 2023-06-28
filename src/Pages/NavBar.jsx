@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes} from 'react-icons/fa'
-import Logo from '../assets/DTLogo.png'
+import Logo from '../assets/DTLogo(1).png'
 import { Link } from 'react-scroll'
 import Menu from '../Components/NavBarLink/Menu/Menu'
 import MobileMenu from '../Components/NavBarLink/MobileMenu/MobileMenu'
