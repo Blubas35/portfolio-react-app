@@ -1,11 +1,16 @@
+import React, { useState } from "react";
+import Modal from "./Modals";
+import { ReactComponent as ExpandIcon } from "../../assets/Expand.svg";
 
-import React, { useState } from 'react'
-import Modal from './Modals';
-import { ReactComponent as ExpandIcon } from '../../assets/Expand.svg'
-
-
-const GridItem = ({ bgImage, spanText, demoLink, codeLink, titleText, bodyText, bodyText2 }) => {
-
+const GridItem = ({
+  bgImage,
+  spanText,
+  demoLink,
+  codeLink,
+  titleText,
+  bodyText,
+  bodyText2,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function openModal() {
@@ -16,21 +21,22 @@ const GridItem = ({ bgImage, spanText, demoLink, codeLink, titleText, bodyText, 
     setIsModalOpen(false);
   }
 
-
   return (
-    <div className='relative group'>
-      <div className='inset-0 bg-gradient-to-t from-gray-500 opacity-50 group-hover:opacity-100'>
+    <div className="relative group">
+      <div className="inset-0 bg-gradient-to-t from-gray-500 opacity-50 group-hover:opacity-100">
         <div
           style={{ backgroundImage: `url(${bgImage})` }}
-          className='bg-white shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-
+          className="bg-white shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
+        >
           {/* Hover Effects */}
-          <div className='opacity-0 group-hover:opacity-100'>
-            <div className='absolute top-0 right-0'>
-            </div>
+          <div className="opacity-0 group-hover:opacity-100">
+            <div className="absolute top-0 right-0"></div>
 
-            <div className='flex justify-end relative'>
-              <button className="modal-button absolute text-center rounded-lg px-2 py-1 bg-white text-gray-700 font-bold text-lg" onClick={openModal}>
+            <div className="flex justify-end relative">
+              <button
+                className="modal-button absolute text-center rounded-lg px-2 py-1 bg-white text-gray-700 font-bold text-lg"
+                onClick={openModal}
+              >
                 <ExpandIcon className="w-5 h-5 inline-block" />
               </button>
               <Modal
@@ -42,22 +48,32 @@ const GridItem = ({ bgImage, spanText, demoLink, codeLink, titleText, bodyText, 
               />
             </div>
 
-            <span className='text-2xl font-bold text-white px-4 tracking-wider'>
+            <span className="text-2xl font-bold text-white px-4 tracking-wider">
               {spanText}
             </span>
-            <div className='pt-8 text-center'>
-              <a href={demoLink} target='_blank' rel='noreferrer'>
-                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
+            <div className="pt-8 text-center">
+              <a
+                href={demoLink}
+                target="_blank"
+                rel="noreferrer"
+                className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg"
+              >
+                Demo
               </a>
-              <a href={codeLink} target='_blank' rel='noreferrer'>
-                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+              <a
+                href={codeLink}
+                target="_blank"
+                rel="noreferrer"
+                className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg"
+              >
+                Code
               </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default GridItem
+export default GridItem;
